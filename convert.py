@@ -1,6 +1,3 @@
-
-from PIL import Image
-
 from PIL import Image
 from pix2tex.cli import LatexOCR
 from sympy.parsing.latex import parse_latex
