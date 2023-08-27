@@ -1,13 +1,8 @@
-from PIL import Image
-from pix2tex.cli import LatexOCR
-from sympy.parsing.latex import parse_latex
-from sympy import *
-import sympy
-import re
-import argparse
-
-
 def sympy_solve(sympy_equation):
+    import re
+    import sympy
+    from sympy import *
+
     words = re.findall(r'\b[A-Za-z]+\b', str(sympy_equation))
 
     var_list = []
@@ -23,6 +18,10 @@ def sympy_solve(sympy_equation):
 
 
 def solve(file):
+    from PIL import Image
+    from pix2tex.cli import LatexOCR
+    from sympy.parsing.latex import parse_latex
+
     img = Image.open(file)
     model = LatexOCR()
     latex_string = model(img)
@@ -30,12 +29,18 @@ def solve(file):
     return equation, sympy_solve(equation)
 
 
-if __name__ == '__main__':
-    descStr = "CalculusOCR"
-    parser = argparse.ArgumentParser(description=descStr)
+def main():
+    import argparse
+
+    desc_str = "CalculusOCR"
+    parser = argparse.ArgumentParser(description=desc_str)
     parser.add_argument('--file', dest='filename', required=True)
     filename = parser.parse_args().filename
 
     eqn, sol = solve(filename)
     print("Equation : ", eqn)
     print("Solution : {}".format(sol))
+
+
+if __name__ == '__main__':
+    main()
