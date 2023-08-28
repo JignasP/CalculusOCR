@@ -1,7 +1,7 @@
+from sympy import *
 def sympy_solve(sympy_equation):
     import re
     import sympy
-    from sympy import *
 
     words = re.findall(r'\b[A-Za-z]+\b', str(sympy_equation))
 
@@ -17,7 +17,7 @@ def sympy_solve(sympy_equation):
     return solution
 
 
-def solve(file):
+def solveimage(file):
     from PIL import Image
     from pix2tex.cli import LatexOCR
     from sympy.parsing.latex import parse_latex
@@ -37,7 +37,7 @@ def main():
     parser.add_argument('--file', dest='filename', required=True)
     filename = parser.parse_args().filename
 
-    eqn, sol = solve(filename)
+    eqn, sol = solveimage(filename)
     print("Equation : ", eqn)
     print("Solution : {}".format(sol))
 
