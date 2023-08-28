@@ -1,1 +1,1 @@
-from CalculusOCR import solve ,sympy_solve
+from .CalculusOCR import solveimage ,sympy_solve
