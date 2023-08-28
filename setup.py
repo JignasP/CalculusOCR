@@ -24,11 +24,14 @@ setup(
         'calculus'
     ],
     packages=find_packages(),
-    install_requires=['pillow','pix2tex'],
+    install_requires=['pillow>=10.0.0','pix2tex>=0.1.2 ','antlr4-python3-runtime==4.11.0'],
    
     classifiers=[
         'Development Status :: 3 - Alpha',
-        'Intended Audience :: Science/Research',        
+        'Intended Audience :: Science/Research',
+        'Intended Audience :: Developers',
+        'Topic :: Scientific/Engineering :: Mathematics',
+        'Topic :: Text Processing :: Markup :: LaTeX',        
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python',
     ],
