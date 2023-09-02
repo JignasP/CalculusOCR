@@ -1,3 +1,7 @@
+
+import subprocess
+subprocess.call(['pip', 'install', 'Pillow>=10.0.0'])
+
 from sympy import *
 def sympy_solve(sympy_equation):
     import re
@@ -43,4 +47,5 @@ def main():
 
 
 if __name__ == '__main__':
+
     main()
