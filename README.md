@@ -25,7 +25,7 @@ CalculusOCR is licensed under the MIT License.The full text of the MIT License i
 
 ## Installation
 
-To install CalculusOCR, use pip:
+To install CalculusOCR using pip:
 
 ```bash
 pip install CalculusOCR
@@ -55,7 +55,7 @@ solution = sympy_solve(<SympyEquation>)
 ```
 ### Solving Calculus Problems
 
-Use solveimage() to perform mathematical operations on the given image:
+Use solveimage() to perform mathematical operations in the given image:
 
 ```python
 SympyEqn, solution = solveimage("<calculus_expression.jpg>")
