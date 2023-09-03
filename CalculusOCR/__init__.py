@@ -17,4 +17,4 @@ with open('requirements.txt', 'r') as requirements_file:
             package_version = package_info[1] if len(package_info) == 2 else None
             check_and_install(package_name, package_version)
 
-from .CalculusOCR import solveimage, sympy_solve
+from .CalculusOCR import solveimage, sympy_solve, getlatex
