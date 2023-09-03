@@ -12,7 +12,7 @@ CalculusOCR is a Python package designed to simplify the process of converting h
 
 3. **Versatile Problem Handling:** Solve a wide range of calculus problems, including derivatives, integrals, limits, and complex mathematical expressions.
 
-4. **Applications:**
+## Applications:
    - **Educational Materials:** Create assignments, quizzes, tests, or exams with handwritten calculus problems.
    - **Research and Reporting:** Incorporate complex calculus equations and formulas into research papers, reports, or presentations.
    - **Problem Solving:** Solve challenging calculus problems using Python .
@@ -60,23 +60,6 @@ Use solveimage() to perform mathematical operations on the given image:
 SympyEqn, solution = solveimage("<calculus_expression.jpg>")
 ```
 
-## Applications
-
-### Educational Materials
-
-Create homework assignments with handwritten calculus problems.
-
-### Research and Reporting
-
-Incorporate complex calculus equations into research papers or presentations.
-
-### Problem Solving
-
-Solve calculus problems using Python and display solutions.
-
-### Teaching and Learning
-
-Enhance calculus education through interactive notebooks or online platforms.
 
 ## Conclusion
 
