@@ -31,7 +31,7 @@ long_description = (this_directory / 'README.md').read_text(encoding='utf-8')
 setup(
     name='CalculusOCR',
     version=cocr_remote_version,
-    description='CalculusOCR: Using a ViT to solve images of equations .',
+    description=' CalculusOCR: A Vision Transformer that can perform optical character recognition on handwritten calculus expressions and outputs LaTeX code, Sympy equation and solution.',
     long_description=long_description,
     long_description_content_type='text/markdown',
     author='Jignas Paturu',
