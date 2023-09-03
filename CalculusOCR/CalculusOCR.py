@@ -16,17 +16,19 @@ def sympy_solve(sympy_equation):
 
     return solution
 
-
-def solveimage(file):
+def getlatex(file):
     from PIL import Image
     from pix2tex.cli import LatexOCR
-    from sympy.parsing.latex import parse_latex
-
+    from sympy.parsing.latex import parse_latex    
     img = Image.open(file)
     model = LatexOCR()
-    latex_string = model(img)
-    equation = parse_latex(latex_string)
-    return equation, sympy_solve(equation)
+    return model(img)
+
+def solveimage(file):
+    
+    latex_string = getlatex(file)
+    sympy_equation = parse_latex(latex_string)
+    return sympy_equation, sympy_solve(equation)
 
 
 def main():
