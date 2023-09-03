@@ -17,7 +17,6 @@ if "-" in cocr_remote_version:
     cocr_remote_version = v + "+" + i + ".git." + s
 
 assert "-" not in cocr_remote_version
-assert "." in cocr_remote_version
 
 assert os.path.isfile("CalculusOCR/version.py")
 with open("CalculusOCR/VERSION", "w", encoding="utf-8") as fh:
