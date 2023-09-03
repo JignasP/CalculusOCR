@@ -34,15 +34,15 @@ pip install CalculusOCR
 ### Importing the Package
 
 ```python
-from CalculusOCR import solveimage,sympy_solve
+from CalculusOCR import *
 ```
 
 ### OCR-Powered Conversion
 
-Convert a handwritten calculus expression image into Sympy equation and solve it:
+Convert a handwritten calculus expression image into LaTeX code:
 
 ```python
-SympyEqn, solution = solveimage("<handwritten_expression.jpg>")
+LaTeX = getlatex("<handwritten_expression.jpg>")
 ```
 
 ### Solving Sympy Equation
@@ -51,6 +51,13 @@ Use SymPy to perform mathematical operations:
 
 ```python
 solution = sympy_solve(<SympyEquation>)
+```
+### Solving Calculus Problems
+
+Use solveimage() to perform mathematical operations on the given image:
+
+```python
+SympyEqn, solution = solveimage("<calculus_expression.jpg>")
 ```
 
 ## Applications
