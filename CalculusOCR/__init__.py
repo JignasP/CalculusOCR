@@ -1,5 +1,7 @@
 import subprocess
 
+import subprocess, os
+
 
 def check_and_install(package, version=None):
     result = subprocess.run(['pip', 'show', package], stdout=subprocess.PIPE, text=True)
@@ -9,12 +11,9 @@ def check_and_install(package, version=None):
     return found
 
 
-with open('requirements.txt', 'r') as requirements_file:
-    for line in requirements_file:
-        package_info = line.strip().split('==')
-        if len(package_info) >= 1:
-            package_name = package_info[0]
-            package_version = package_info[1] if len(package_info) == 2 else None
-            check_and_install(package_name, package_version)
+with open(os.path.join(os.path.dirname(__file__), 'requirements.txt')) as f:
+    for line in f:
+        name, version = map(str.strip, line.split('==', 1))
+        check_and_install(name, version if version else None)
 
 from .CalculusOCR import solveimage, sympy_solve
