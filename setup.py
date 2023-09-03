@@ -45,7 +45,7 @@ setup(
         'calculus'
     ],
     packages=find_packages(),
-
+    install_requires=[],
 
     classifiers=[
         'Development Status :: 3 - Alpha',
