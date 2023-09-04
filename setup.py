@@ -11,7 +11,7 @@ cocr_remote_version = (
     .strip()
 )
 
-print("1",cocr_remote_version)
+print(cocr_remote_version)
 '''
 if "-" in cocr_remote_version:
 
@@ -34,7 +34,7 @@ long_description = (this_directory / 'README.md').read_text(encoding='utf-8')
 
 setup(
     name='CalculusOCR',
-    version=str(cocr_remote_version),
+    version=strip(cocr_remote_version),
     description=' CalculusOCR: A Vision Transformer that can perform optical character recognition on handwritten calculus expressions and outputs LaTeX code, Sympy equation and solution.',
     long_description=long_description,
     long_description_content_type='text/markdown',
