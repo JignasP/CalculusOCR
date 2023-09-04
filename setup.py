@@ -5,44 +5,9 @@ from pathlib import Path
 import subprocess
 import os
 subprocess.run(['pip', 'install', 'pbr'])
-
 import pbr.version
 
 version_info = pbr.version.VersionInfo('CalculusOCR')
-
-'''
-cocr_remote_version = (
-    subprocess.run(["git", "describe", "--tags"], stdout=subprocess.PIPE)
-    .stdout.decode("utf-8")
-    .strip()
-)
-__version__ = cocr_remote_version
-print(cocr_remote_version)
-
-with open('CalculusOCR/version.txt', "w") as file:
-    file.write(cocr_remote_version)
-    print("Done")
-
-
-if "-" in cocr_remote_version:
-
-    v,i,s = cocr_remote_version.split("-")
-    cocr_remote_version = v + "+" + i + ".git." + s
-
-print("2",cocr_remote_version)
-
-assert os.path.isfile("CalculusOCR/version.py")
-
-with open("CalculusOCR/VERSION", "w", encoding="utf-8") as fh:
-    fh.write("%s\n" % cocr_remote_version)
-
-    
-
-with open('CalculusOCR/version.txt', "r") as file:
-    version_no = file.read()
-
-'''
-    
 
 
 this_directory = Path(__file__).parent
@@ -69,7 +34,7 @@ setup(
     
 
     classifiers=[
-        'Development Status :: 3 - Alpha',
+        'Development Status :: 4 - Beta ',
         'Intended Audience :: Science/Research',
         'Intended Audience :: Developers',
         'Topic :: Scientific/Engineering :: Mathematics',
