@@ -12,6 +12,7 @@ cocr_remote_version = (
 )
 
 print("1",cocr_remote_version)
+'''
 if "-" in cocr_remote_version:
 
     v,i,s = cocr_remote_version.split("-")
@@ -24,7 +25,7 @@ assert "." in cocr_remote_version
 assert os.path.isfile("CalculusOCR/version.py")
 with open("CalculusOCR/VERSION", "w", encoding="utf-8") as fh:
     fh.write("%s\n" % cocr_remote_version)
-
+'''
 
 this_directory = Path(__file__).parent
 long_description = (this_directory / 'README.md').read_text(encoding='utf-8')
@@ -33,7 +34,7 @@ long_description = (this_directory / 'README.md').read_text(encoding='utf-8')
 
 setup(
     name='CalculusOCR',
-    version=cocr_remote_version,
+    version=str(cocr_remote_version),
     description=' CalculusOCR: A Vision Transformer that can perform optical character recognition on handwritten calculus expressions and outputs LaTeX code, Sympy equation and solution.',
     long_description=long_description,
     long_description_content_type='text/markdown',
