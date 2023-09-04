@@ -5,6 +5,11 @@ from pathlib import Path
 import subprocess
 import os
 
+import pbr.version
+
+version_info = pbr.version.VersionInfo('CalculusOCR')
+
+'''
 cocr_remote_version = (
     subprocess.run(["git", "describe", "--tags"], stdout=subprocess.PIPE)
     .stdout.decode("utf-8")
@@ -12,7 +17,7 @@ cocr_remote_version = (
 )
 __version__ = cocr_remote_version
 print(cocr_remote_version)
-'''
+
 with open('CalculusOCR/version.txt', "w") as file:
     file.write(cocr_remote_version)
     print("Done")
@@ -34,8 +39,8 @@ with open("CalculusOCR/VERSION", "w", encoding="utf-8") as fh:
 
 with open('CalculusOCR/version.txt', "r") as file:
     version_no = file.read()
-'''
 
+'''
     
 
 
@@ -45,7 +50,7 @@ long_description = (this_directory / 'README.md').read_text(encoding='utf-8')
 
 setup(
     name='CalculusOCR',
-    version= __version__,
+    version= version_info.release_string(),
     description=' CalculusOCR: A Vision Transformer that can perform optical character recognition on handwritten calculus expressions and outputs LaTeX code, Sympy equation and solution.',
     long_description=long_description,
     long_description_content_type='text/markdown',
@@ -60,6 +65,8 @@ setup(
     ],
     packages=find_packages(),
     install_requires=[],
+    setup_requires=['pbr>=1.0'],
+    pbr=True,
 
     classifiers=[
         'Development Status :: 3 - Alpha',
