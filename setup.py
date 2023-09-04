@@ -29,11 +29,13 @@ assert os.path.isfile("CalculusOCR/version.py")
 
 with open("CalculusOCR/VERSION", "w", encoding="utf-8") as fh:
     fh.write("%s\n" % cocr_remote_version)
-'''
 
+    
 
 with open('CalculusOCR/version.txt', "r") as file:
     version_no = file.read()
+'''
+
     
 
 
