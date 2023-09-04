@@ -11,11 +11,13 @@ cocr_remote_version = (
     .strip()
 )
 
+print("1",cocr_remote_version)
 if "-" in cocr_remote_version:
 
     v,i,s = cocr_remote_version.split("-")
     cocr_remote_version = v + "+" + i + ".git." + s
 
+print("2",cocr_remote_version)
 assert "-" not in cocr_remote_version
 assert "." in cocr_remote_version
 
