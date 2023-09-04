@@ -40,6 +40,9 @@ with open('CalculusOCR/version.txt', "r") as file:
 try:
     git_tag = subprocess.check_output(["git", "describe", "--tags", "--abbrev=0"]).strip().decode("utf-8")
 
+except subprocess.CalledProcessError:
+    print("errorrrrrr")
+
 this_directory = Path(__file__).parent
 long_description = (this_directory / 'README.md').read_text(encoding='utf-8')
 
