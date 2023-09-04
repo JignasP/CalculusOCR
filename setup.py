@@ -12,10 +12,10 @@ cocr_remote_version = (
 )
 
 print(cocr_remote_version)
-if cocr_remote_version != '':
-    with open('CalculusOCR/version.txt', "w") as file:
-        file.write(cocr_remote_version)
-        print("Done")
+
+with open('CalculusOCR/version.txt', "w") as file:
+    file.write(cocr_remote_version)
+    print("Done")
 
 '''
 if "-" in cocr_remote_version:
