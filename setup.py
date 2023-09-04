@@ -4,6 +4,7 @@ from setuptools import setup, find_packages
 from pathlib import Path
 import subprocess
 import os
+subprocess.run(['pip', 'install', 'pbr'])
 
 import pbr.version
 
@@ -65,8 +66,7 @@ setup(
     ],
     packages=find_packages(),
     install_requires=[],
-    setup_requires=['pbr>=1.0'],
-    pbr=True,
+    
 
     classifiers=[
         'Development Status :: 3 - Alpha',
