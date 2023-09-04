@@ -3,7 +3,7 @@
 
 ## Introduction
 
-[CalculusOCR](https://github.com/JignasP/CalculusOCR) is a Python package designed to simplify the process of converting handwritten calculus expressions into LaTeX code, concerts then into Sympy equation and solving them. 
+[CalculusOCR](https://github.com/JignasP/CalculusOCR) is a Python package designed to simplify the process of converting handwritten calculus expressions into LaTeX code, converts then into Sympy equation and solving them. 
 
 ### Key Features
 
