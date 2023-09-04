@@ -34,7 +34,7 @@ with open("CalculusOCR/VERSION", "w", encoding="utf-8") as fh:
 this_directory = Path(__file__).parent
 long_description = (this_directory / 'README.md').read_text(encoding='utf-8')
 
-with open("version.txt", "r") as file:
+with open('CalculusOCR/version.txt', "r") as file:
     version_no = file.read()
 
 setup(
