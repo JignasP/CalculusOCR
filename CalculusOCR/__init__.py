@@ -1,20 +1,16 @@
 import subprocess
+import importlib
+import subprocess
 
 
-def check_and_install(package, version=None):
-    result = subprocess.run(['pip', 'show', package], stdout=subprocess.PIPE, text=True)
-    found = version is None or version in result.stdout
-    if not found:
-        subprocess.call(['pip', 'install', f'{package}' + (f'=={version}' if version else '')])
-    return found
+requirements_file=['pix2tex','antlr4-python3-runtime==4.11.0','sympy']
+def install_package(package_name):
+    try:
+        importlib.import_module(package_name)
+    except ImportError:
+        subprocess.check_call(["pip", "install", package_name])
 
-
-with open('requirements.txt', 'r') as requirements_file:
-    for line in requirements_file:
-        package_info = line.strip().split('==')
-        if len(package_info) >= 1:
-            package_name = package_info[0]
-            package_version = package_info[1] if len(package_info) == 2 else None
-            check_and_install(package_name, package_version)
+for package in requirements_file:
+    install_package(package)
 
 from .CalculusOCR import solveimage, sympy_solve, getlatex
