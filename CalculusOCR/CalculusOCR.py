@@ -1,24 +1,24 @@
+import re
+import sympy
+import argparse
 from sympy import *
+from PIL import Image
+from pix2tex.cli import LatexOCR
+from sympy.parsing.latex import parse_latex
+
 def sympy_solve(sympy_equation):
-    import re
-    import sympy
 
     words = re.findall(r'\b[A-Za-z]+\b', str(sympy_equation))
-
     var_list = []
     for word in words:
         if word not in dir(sympy) and word not in var_list:
             var_list.append(word)
 
     sympy_symbols = symbols(" ".join(var_list))
-
     solution = sympy_equation.doit()
-
     return solution
 
 def getlatex(file):
-    from PIL import Image
-    from pix2tex.cli import LatexOCR
 
     img = Image.open(file)
     model = LatexOCR()
@@ -26,14 +26,12 @@ def getlatex(file):
 
 def solveimage(file):
 
-    from sympy.parsing.latex import parse_latex
     latex_string = getlatex(file)
     sympy_equation = parse_latex(latex_string)
     return sympy_equation, sympy_solve(sympy_equation)
 
 
 def main():
-    import argparse
 
     desc_str = "CalculusOCR"
     parser = argparse.ArgumentParser(description=desc_str)
