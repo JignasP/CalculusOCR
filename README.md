@@ -62,6 +62,8 @@ SympyEqn, solution = solveimage("<calculus_expression.jpg>")
 ```
 
 
-## Conclusion
+## Contributing
+Whether you have ideas, translations, design changes, code cleaning, or even major code changes, help is always welcome. The app gets better and better with each contribution, no matter how big or small! If you'd like to get involved, check our [contribution notes](CONTRIBUTING.md).
 
-CalculusOCR simplifies the process of working with handwritten calculus expressions, making it an invaluable tool for educators, researchers, and anyone dealing with complex mathematical problems. This documentation provides a comprehensive guide to getting started with CalculusOCR and leveraging its powerful features.
+Please note that all participants in this project are expected to follow our Code of Conduct. By participating in this project you agree to abide by its terms. See [CODE\_OF\_CONDUCT.md](CODE_OF_CONDUCT.md).
+
