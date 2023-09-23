@@ -3,7 +3,7 @@ import importlib
 import subprocess
 
 
-requirements_file=['pix2tex','antlr4-python3-runtime==4.11.0','sympy']
+requirements_file=['antlr4-python3-runtime==4.11.0','pix2tex','sympy']
 def install_package(package_name):
     try:
         importlib.import_module(package_name)
